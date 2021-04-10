@@ -1,6 +1,6 @@
 **LAB 2** </br>
-**Methods:** [Methods](basiclibrary/lib/src/main/java)</br>
-**Testing:** [Testing](basiclibrary/lib/src/test/java/basiclibrary)</br>
+**Methods:** [Methods](https://github.com/SalahAlawneh/java-fundamentals/tree/main/basiclibrary/lib/src/main/java/basiclibrary)</br>
+**Testing:** [Testing](https://github.com/SalahAlawneh/java-fundamentals/tree/main/basiclibrary/lib/src/test/java/basiclibrary)</br>
 **Rolling Dice**</br>
 Write a method called roll that accepts an integer n and rolls a six-sided dice n times. The method should return an array containing the values of the rolls.</br>
 
