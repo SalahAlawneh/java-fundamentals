@@ -1,6 +1,8 @@
 **LAB 2** </br>
-**Methods:** [Methods](basiclibrary/lib/src/main/java)</br>
-**Testing:** [Testing](basiclibrary/lib/src/test/java/basiclibrary)</br>
+
+**Methods:** [Methods](https://github.com/SalahAlawneh/java-fundamentals/tree/lab02/basiclibrary/lib/src/main/java/basiclibrary)</br>
+**Testing:** [Testing](https://github.com/SalahAlawneh/java-fundamentals/tree/lab02/basiclibrary/lib/src/test/java/basiclibrary)</br>
+
 **Rolling Dice**</br>
 Write a method called roll that accepts an integer n and rolls a six-sided dice n times. The method should return an array containing the values of the rolls.</br>
 
@@ -13,6 +15,7 @@ Write a method that accepts an array of integers and calculates and returns the 
 
 **Arrays of Arrays**</br>
 Given an array of arrays calculate the average value for each array and return the array with the lowest average.
+
 
 
 **LAB 3** </br>
@@ -34,3 +37,4 @@ Don’t show an error if the line ends with an opening curly brace {</br>
 Don’t show an error if the line ends with an closing curly brace }</br>
 Don’t show an error if the line contains if or else</br>
 Call that method in your main method on the file ```gates.js```, and print out the resulting error message.</br>
+
