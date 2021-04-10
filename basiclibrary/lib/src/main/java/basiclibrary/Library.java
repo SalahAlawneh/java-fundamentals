@@ -3,27 +3,15 @@
  */
 package basiclibrary;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
+import java.util.*;
 
 public class Library {
 
     public static void main(String[] args) {
-        System.out.println("==============");
 
-        int[][] weeklyMonthTemperatures = {
-                {2, 2, 2, 2, 2, 2, 2},
-                {3, 3, 3, 3, 3, 3, 3},
-                {4, 4, 4, 4, 4, 4, 4},
-                {1, 1, 1, 1, 1, 1, 1},
-        };
-
-        System.out.println(Arrays.toString(matrixRowsAvg(weeklyMonthTemperatures)));
     }
 
     public static int[] roll(int n) {
-        System.out.println("salah");
         int[] valuesOfRolling = new int[n];
         Random random = new Random();
         for (int i = 0; i < n; i++) {
@@ -67,4 +55,49 @@ public class Library {
         }
         return matrix[smallestRowAvgIndex];
     }
+
+    public static String analyzingWeatherData(int[][] weeklyMonthTemperatures) {
+        String neverSaw = "";
+        HashSet<Integer> allTemp = new HashSet<Integer>();
+        for (int i = 0; i < weeklyMonthTemperatures.length; i++) {
+            for (int j = 0; j < 7; j++) {
+                allTemp.add(weeklyMonthTemperatures[i][j]);
+            }
+        }
+        for (int i = Collections.min(allTemp); i <= (Collections.max(allTemp)); i++) {
+            if (!allTemp.contains(i)) {
+                neverSaw = neverSaw + "Never saw temperature: " + i + "\n";
+            }
+        }
+
+        String analyzedData = "High: " + Collections.max(allTemp) + "\nLow: " + Collections.min(allTemp) + "\n"
+                + neverSaw;
+        return analyzedData;
+    }
+
+    public static String tally(List<String> votes) {
+        String winner = "";
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        for (String candidate : votes) {
+            if (map.keySet().contains(candidate)) {
+                map.put(candidate, map.get(candidate) + 1);
+            } else {
+                map.put(candidate, 1);
+            }
+        }
+        int maxVotesNum = 0;
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String candidate = entry.getKey();
+            Integer votesNumber = entry.getValue();
+            if (votesNumber > maxVotesNum) {
+                maxVotesNum = votesNumber;
+                winner = entry.getKey();
+            }
+
+        }
+        String theWinner = winner + " received the most votes!";
+        return theWinner;
+    }
+
+
 }
