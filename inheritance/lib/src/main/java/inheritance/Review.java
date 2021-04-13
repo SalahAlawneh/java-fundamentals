@@ -1,33 +1,25 @@
 package inheritance;
 
-public class Review extends Restaurant {
+public class Review {
     String body;
-    String name;
     String author;
-    int stars;
-    String price;
+    int numberOfStars;
 
-    Review(String body, String name, String author, int stars, String price) {
-        super(name, price);
-        this.body = body;
-        this.author = author;
-        this.stars = stars;
+    public Review() {
     }
 
-    //
-//    Review() {
-//        super();
-//    }
+    public Review(String body, String author, int numberOfStars) {
+        this.body = body;
+        this.author = author;
+        this.numberOfStars = numberOfStars;
+    }
 
-    //
     @Override
     public String toString() {
         return "Review{" +
-                "name='" + name + '\'' +
+                "body='" + body + '\'' +
                 ", author='" + author + '\'' +
-                ", stars=" + stars +
-                ", price=" + price + '$' +
+                ", numberOfStars=" + numberOfStars +
                 '}';
-
     }
 }

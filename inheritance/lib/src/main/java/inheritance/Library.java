@@ -5,14 +5,9 @@ package inheritance;
 
 public class Library {
 
-    public static void main(String [] args) {
-        Restaurant restaurant1 = new Restaurant("Burgeriz",5,"$$");
-        restaurant1.addReview("Amazing food, bad for health", "Burgeriz", "Salah", 5, "$$$");
-        String result =restaurant1.toString();
+    public static void main(String[] args) {
 
 
     }
-    public boolean someLibraryMethod() {
-        return true;
-    }
+
 }
