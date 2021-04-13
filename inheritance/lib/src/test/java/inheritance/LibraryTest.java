@@ -4,11 +4,16 @@
 package inheritance;
 
 import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test public void testSomeLibraryMethod() {
-        Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+    @Test
+    public void testRestaurantReview() {
+        Restaurant burgerizz = new Restaurant("burgerizz", 5, "$$");
+        burgerizz.addReview("its amazing restaurant", "Salah", 4);
+        String expected = "Restaurant{name='burgerizz', numberOfStars=4, priceCategory='$$', body='its amazing restaurant', author='Salah'}";
+        String actual = burgerizz.toString();
+        assertEquals(expected, actual);
     }
 }
