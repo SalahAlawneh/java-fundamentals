@@ -7,6 +7,16 @@ public class Library {
 
     public static void main(String[] args) {
 
+//        Restaurant newRes = new Restaurant("Hamada", "$$");
+//        Review salah = new Review("good", "Salah", 3);
+//        Review rami = new Review("bad", "rame", 1);
+//        newRes.addReview(salah);
+//        newRes.addReview(rami);
+//        System.out.println(newRes);
+        Shop shop = new Shop("sameh mall", "$", "good quality");
+        Review salah = new Review("good", "Salah", 3);
+        shop.addedReview(salah);
+        System.out.println(shop.toString());
 
     }
 

@@ -1,36 +1,63 @@
 package inheritance;
 
-public class Restaurant {
-    String name;
-    int numberOfStars;
-    String priceCategory;
-    String body;
-    String author;
+import java.util.ArrayList;
 
-    public Restaurant() {
+public class Restaurant extends Schema {
+    private long restaurantNumberOfStars;
+    private String restaurantPriceCategory;
+    private ArrayList<Review> restaurantReview = new ArrayList<Review>();
+
+    public Restaurant(String restaurantName, String restaurantPriceCategory) {
+        this.name = restaurantName;
+        this.restaurantPriceCategory = restaurantPriceCategory;
     }
 
-    public Restaurant(String name, int numberOfStars, String priceCategory) {
-        this.name = name;
-        this.numberOfStars = numberOfStars;
-        this.priceCategory = priceCategory;
+    public String getRestaurantName() {
+        return name;
     }
 
-    public void addReview(String body, String author, int numberOfStars) {
-        Review addReview = new Review(body, author, numberOfStars);
-        this.body = addReview.body;
-        this.author = addReview.author;
-        this.numberOfStars = addReview.numberOfStars;
+    public void setRestaurantName(String restaurantName) {
+        this.name = restaurantName;
+    }
+
+    public long getRestaurantNumberOfStars() {
+        return restaurantNumberOfStars;
+    }
+
+    public void setRestaurantNumberOfStars(int restaurantNumberOfStars) {
+        this.restaurantNumberOfStars = restaurantNumberOfStars;
+    }
+
+    public String getRestaurantPriceCategory() {
+        return restaurantPriceCategory;
+    }
+
+    public void setRestaurantPriceCategory(String restaurantPriceCategory) {
+        this.restaurantPriceCategory = restaurantPriceCategory;
+    }
+
+    public void addReview(Review review) {
+        restaurantReview.add(review);
+        int sum = 0;
+        int i = 0;
+        for (Review reviewIteration : restaurantReview) {
+            sum += reviewIteration.getReviewNumberOfStars();
+        }
+        this.restaurantNumberOfStars = sum / restaurantReview.size();
     }
 
     @Override
     public String toString() {
         return "Restaurant{" +
-                "name='" + name + '\'' +
-                ", numberOfStars=" + numberOfStars +
-                ", priceCategory='" + priceCategory + '\'' +
-                ", body='" + body + '\'' +
-                ", author='" + author + '\'' +
+                "restaurantName='" + name + '\'' +
+                ", restaurantNumberOfStars=" + restaurantNumberOfStars +
+                ", restaurantPriceCategory='" + restaurantPriceCategory + '\'' +
+                ", restaurantReview=" + restaurantReview +
                 '}';
+    }
+
+    @Override
+    public void addedReview(Review salah) {
+
     }
 }
