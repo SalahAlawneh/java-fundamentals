@@ -8,12 +8,33 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class LibraryTest {
-    @Test
-    public void testRestaurantReview() {
-        Restaurant burgerizz = new Restaurant("burgerizz", 5, "$$");
-        burgerizz.addReview("its amazing restaurant", "Salah", 4);
-        String expected = "Restaurant{name='burgerizz', numberOfStars=4, priceCategory='$$', body='its amazing restaurant', author='Salah'}";
-        String actual = burgerizz.toString();
-        assertEquals(expected, actual);
-    }
+//    @Test
+//    public void testRestaurantAddReview() {
+//        Restaurant burgerizz = new Restaurant("burgerizz", 5);
+//        Review salah = new Review("It's amazing", "salah", 5);
+//        burgerizz.addReview(salah);
+//        Review rami = new Review("I don't like it", "rami", 1);
+//        burgerizz.addReview(rami);
+//        String expected="Restaurant{stars=3.0, price=5$, name='burgerizz'}";
+//        String actual=burgerizz.toString();
+//        assertEquals(expected,actual);
+//    }
+//
+//    @Test
+//    public void testRestaurantInstance() {
+//        Restaurant burgerizz = new Restaurant("burgerizz", 5);
+//        String expected="Restaurant{stars=0.0, price=5$, name='burgerizz'}";
+//        String actual=burgerizz.toString();
+//        assertEquals(expected,actual);
+//    }
+//
+//    @Test
+//    public void testReviewInstance() {
+//        Review salah = new Review("It's amazing", "salah", 5);
+//        String expected="Review{body='It's amazing', author='salah', stars=5}";
+//        String actual=salah.toString();
+//        assertEquals(expected,actual);
+//    }
+
+
 }

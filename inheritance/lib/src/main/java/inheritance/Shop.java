@@ -1,19 +1,39 @@
 package inheritance;
 
-public class Shop {
-    String name;
-    String description;
-    String price;
+public class Shop extends Schema implements Test {
 
-    public Shop(){
+    public String getShopName() {
+        return name;
+    }
+
+    public void Shop(String shopName) {
+        this.name = shopName;
+    }
+
+    public Shop(String name, String numberOfDollarSign, String description) {
+        this.name = name;
+        this.numberOfDollarSign = numberOfDollarSign;
+        this.description = description;
+    }
+
+    public void addReview(Review review) {
+        addedReview.add(review);
+
     }
 
     @Override
     public String toString() {
-        return "Shop{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", price='" + price + '\'' +
-                '}';
+        return super.toString() + "price category: " + numberOfDollarSign + ", description: " + description;
+
+    }
+
+    @Override
+    public void addedReview(Review salah) {
+
+    }
+
+    @Override
+    public void addReview() {
+
     }
 }
